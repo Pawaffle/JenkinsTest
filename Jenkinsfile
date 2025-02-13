@@ -14,12 +14,6 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'mvn clean install'
-            }
-        }
-
-        stage('Build') {
-            steps {
                 script {
                     if (isUnix()) {
                         sh './mvnw clean install'
