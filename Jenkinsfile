@@ -14,13 +14,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                script {
-                    if (isUnix()) {
-                        sh 'mvn clean package -Pproduction -DskipTests'
-                    } else {
-                        bat 'mvn clean package -Pproduction -DskipTests'
-                    }
-                }
+                sh 'mvn clean install'
             }
         }
 
