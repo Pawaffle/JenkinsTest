@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', 'https://github.com/Pawaffle/JenkinsTest.git'
+                git 'https://github.com/Pawaffle/JenkinsTest.git'
             }
         }
 
