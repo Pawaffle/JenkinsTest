@@ -18,6 +18,18 @@ pipeline {
             }
         }
 
+        stage('Build') {
+            steps {
+                script {
+                    if (isUnix()) {
+                        sh './mvnw clean install'
+                    } else {
+                        bat 'mvnw.cmd clean install'
+                    }
+                }
+            }
+        }
+
         stage('Test') {
             steps {
                 script {
