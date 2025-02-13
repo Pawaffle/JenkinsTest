@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/Pawaffle/StockMaster3000/tree/main/LectureW4'
+                git 'https://github.com/Pawaffle/JenkinsTest.git'
             }
         }
 
